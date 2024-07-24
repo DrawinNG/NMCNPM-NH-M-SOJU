@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security5"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans">
+<nav class="w-full flex justify-between items-center px-4 py-2 bg-white shadow-md">
+    <div class="w-1/4 px-5">
+        <img th:src="@{/img/logobook.jpg}"  alt="Logo" class="w-24 h-24 rounded-full object-cover">
+    </div>
+    <div class="flex justify-center space-x-4 w-3/4">
+        <a href="/home" class="hover:text-red-500 text-lg text-gray-700 px-3 transition duration-300">HOME</a>
+        <div class="w-px h-6 my-auto bg-gray-300"></div>
+        <a href="/aboutUs" class="hover:text-red-500 text-lg text-gray-700 px-3 transition duration-300">ABOUT US</a>
+        <div class="w-px h-6 my-auto bg-gray-300"></div>
+        <a href="/books" class="hover:text-red-500 text-lg text-gray-700 px-3 transition duration-300">BOOKS</a>
+        <div class="w-px h-6 my-auto bg-gray-300"></div>
+        <a href="/newBooks" class="hover:text-red-500 text-lg text-gray-700 px-3 transition duration-300">NEW RELEASE</a>
+        <div class="w-px h-6 my-auto bg-gray-300"></div>
+        <a href="/contactUs" class="hover:text-red-500 text-lg text-gray-700 px-3 transition duration-300">CONTACT US</a>
+        <div class="w-px h-6 my-auto bg-gray-300"></div>
+        <a href="/blog" class="hover:text-red-500 text-lg text-gray-700 px-3 transition duration-300">BLOG</a>
+    </div>
+    <div class="flex justify-center w-1/4 space-x-6">
+        <a href="#" class="text-gray-600 hover:text-gray-800 transition duration-300">
+            <img th:src="@{/img/account_circle.png}"  alt="User Icon" class="h-6 object-cover">
+        </a>
+        <a href="#" class="text-gray-600 hover:text-gray-800 transition duration-300">
+            <img th:src="@{/img/add_shopping_cart.png}" alt="Cart Icon" class="h-6 object-cover">
+        </a>
+        <a href="#" class="text-gray-600 hover:text-gray-800 transition duration-300">
+            <img th:src="@{/img/favorite.png}"  alt="Wishlist Icon" class="h-6 object-cover">
+        </a>
+    </div>
+</nav>
+
+<main layout:fragment="content">
+    <!-- Content will be inserted here -->
+</main>
+
+<footer class="bg-gray-800 text-white py-6 mt-8">
+    <div class="container mx-auto text-center">
+        <p>&copy; 2024 Your Bookstore. All rights reserved.</p>
+    </div>
+</footer>
+</body>
+</html>
